@@ -38,7 +38,7 @@
                                 <td class="align-middle">{{ $product->valor}}</td>
                                 <td class="align-middle">
                                         <a href="{{ route('products.edit', ['id'=>$product->id]) }}" type="button" class="btn btn-warning">Editar</a>
-                                        <a href="{{ route('products.delete', ['id'=>$product->id]) }}" type="button" class="btn btn-danger">Excluir</a>
+                                        <a href="{{ route('products.destroy', ['id'=>$product->id]) }}" type="button" class="btn btn-danger">Excluir</a>
                                 </td>
                             </tr>
                             @empty

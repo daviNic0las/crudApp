@@ -34,7 +34,7 @@
                                 <td class="align-middle">{{ $sector->nome}}</td>
                                 <td class="align-middle">
                                         <a href="{{ route('sector.edit', ['id'=>$sector->id]) }}" type="button" class="btn btn-warning">Editar</a>
-                                        <a href="{{ route('sector.delete', ['id'=>$sector->id]) }}" type="button" class="btn btn-danger">Excluir</a>
+                                        <a href="{{ route('sector.destroy', ['id'=>$sector->id]) }}" type="button" class="btn btn-danger">Excluir</a>
                                 </td>
                             </tr>
                             @empty

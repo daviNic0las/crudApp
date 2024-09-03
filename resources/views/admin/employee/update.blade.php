@@ -31,9 +31,10 @@
                         <label class="form-label">Setor do Funcionário*</label>
                             <select id="sector" name="sector_id" required class="form-control" >
                                 <option value="">Selecione um Setor</option>
-                                    @foreach ($sectors as $sector)
-                                <option value="{{ $sector->id }}"> {{ $sector->nome }} </option>
-                                    @endforeach
+                                    @forelse ($sectors as $sector)
+                                <option value="{{ $sector->id }}" {{ old('sector_id', $employees->sector_id) == $sector->id ? 'selected' : ''}}> {{ $sector->nome }} </option>
+                                @empty
+                                    @endforelse
                             </select>
                                     @error('sector_id')
                                 <span class="text-danger">{{$message}}</span>
@@ -77,4 +78,4 @@ const maskCurrency = (valor, locale = 'pt-BR', currency = 'BRL') => {
     currency
   }).format(valor)
 }
-</script>
+</script> 

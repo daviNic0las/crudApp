@@ -22,7 +22,7 @@ class ProductController extends Controller
         return view('admin.product.create', compact('categories'));
     }
 
-    public function save(StoreUpdateSupport $request)
+    public function store(StoreUpdateSupport $request)
     {
         
         $data = $request->validated();
@@ -39,12 +39,12 @@ class ProductController extends Controller
 
     public function edit($id)
     {
+        $categories = Category::orderBy('nome')->get();
         $products = Product::findOrFail($id);
-        $categories = Category::all();
         return view('admin.product.update', compact('products', 'categories'));
     }
 
-    public function delete($id)
+    public function destroy($id)
     {
         $products = Product::findOrFail($id)->delete();
         if ($products) {

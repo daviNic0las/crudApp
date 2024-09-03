@@ -21,7 +21,7 @@ class EmployeeController extends Controller
         return view('admin.employee.create', compact('sectors'));
     }
 
-    public function save(EmployeeUpdateRequest $request)
+    public function store(EmployeeUpdateRequest $request)
     {
         
         $data = $request->validated();
@@ -38,12 +38,12 @@ class EmployeeController extends Controller
 
     public function edit($id)
     {
-        $sectors = Sector::all();
+        $sectors = Sector::orderBy('nome')->get();
         $employees = Employee::findOrFail($id);
         return view('admin.employee.update', compact('employees', 'sectors'));
     }
 
-    public function delete($id)
+    public function destroy($id)
     {
         $employees = Employee::findOrFail($id)->delete();
         if ($employees) {

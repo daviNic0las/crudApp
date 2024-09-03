@@ -38,7 +38,7 @@
                                 <td class="align-middle">{{ $employee->salario}}</td>
                                 <td class="align-middle">
                                         <a href="{{ route('employee.edit', ['id'=>$employee->id]) }}" type="button" class="btn btn-warning">Editar</a>
-                                        <a href="{{ route('employee.delete', ['id'=>$employee->id]) }}" type="button" class="btn btn-danger">Excluir</a>
+                                        <a href="{{ route('employee.destroy', ['id'=>$employee->id]) }}" type="button" class="btn btn-danger">Excluir</a>
                                 </td>
                             </tr>
                             @empty

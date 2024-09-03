@@ -26,9 +26,8 @@ class CategoryController extends Controller
         return view('admin.category.create');
     }
 
-    public function save(CategoryUpdateRequest $request)
+    public function store(CategoryUpdateRequest $request)
     {
-        
         $data = $request->validated();
         // dd($data);
         $data = Category::create($data);
@@ -47,7 +46,7 @@ class CategoryController extends Controller
         return view('admin.category.update', compact('categories',));
     }
 
-    public function delete($id)
+    public function destroy($id)
     {
         $categories = Category::findOrFail($id)->delete();
         if ($categories) {

@@ -26,7 +26,7 @@ class SectorController extends Controller
         return view('admin.sector.create');
     }
 
-    public function save(SectorUpdateRequest $request)
+    public function store(SectorUpdateRequest $request)
     {
         
         $data = $request->validated();
@@ -47,7 +47,7 @@ class SectorController extends Controller
         return view('admin.sector.update', compact('sectors',));
     }
 
-    public function delete($id)
+    public function destroy($id)
     {
         $sectors = Sector::findOrFail($id)->delete();
         if ($sectors) {

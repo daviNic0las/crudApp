@@ -19,7 +19,7 @@
 
                         <p><a href="{{ route('products.index') }}" class="btn btn-primary">Voltar</a></p>
 
-                        <form action="{{ route('products.save') }}" method="POST" enctype="multipart/form-data">
+                        <form action="{{ route('products.store') }}" method="POST" enctype="multipart/form-data">
                             @csrf
                             <div class="row mb-3">
                                 <div class="col">
@@ -42,7 +42,7 @@
                                     @error('category_id')
                                     <span class="text-danger">{{$message}}</span>
                                     @enderror
-                                </div>
+                                </div> 
                             </div>
                             <div class="row mb-3">
                                 <div class="col">
