@@ -57,6 +57,7 @@
                     x-transition
                     x-init="setTimeout(() => show = false, 2000)"
                     class="text-sm text-gray-600"
+                    :href="route('admin.index')" :active="request()->routeIs('dashboard')"
                 >{{ __('Saved.') }}</p>
             @endif
         </div>

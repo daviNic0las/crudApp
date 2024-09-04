@@ -6,7 +6,7 @@
                 <!-- Logo -->
                 <div class="shrink-0 flex items-center">
                     <a href="{{ route('admin.index') }}" style="text-decoration: none;">
-                        <img src="{{ asset('logo/LOGO APAE RUSSAS CE.png') }}" style="width: 100px">    
+                        <img src="{{ asset('logo/LOGO APAE RUSSAS CE.png') }}" style="width: 115px">    
                         <!-- <x-application-logo class="block h-9 w-auto fill-current text-gray-800" style="width: 100px"/> -->
                     </a>
                 </div>
@@ -14,18 +14,18 @@
                 <!-- Navigation Links -->
                 <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
                     <x-nav-link :href="route('admin.index')" :active="request()->routeIs('dashboard')" style="text-decoration: none;">
-                        {{ __('Sistema APAE Russas') }}
+                        {{ __('SIAPAE Russas') }}
                     </x-nav-link>
-                    <x-nav-link :href="route('products.index')" :active="request()->routeIs('dashboard')" style="text-decoration: none;">
+                    <x-nav-link :href="route('products.index')" :active="request()->routeIs('products.index')" style="text-decoration: none;">
                         {{ __('Produtos') }}
                     </x-nav-link>
-                    <x-nav-link :href="route('category.index')" :active="request()->routeIs('dashboard')" style="text-decoration: none;">
+                    <x-nav-link :href="route('category.index')" :active="request()->routeIs('category.index')" style="text-decoration: none;">
                         {{ __('Categorias') }}
                     </x-nav-link>
-                    <x-nav-link :href="route('employee.index')" :active="request()->routeIs('dashboard')" style="text-decoration: none;">
+                    <x-nav-link :href="route('employee.index')" :active="request()->routeIs('employee.index')" style="text-decoration: none;">
                         {{ __('Funcionários') }}
                     </x-nav-link>
-                    <x-nav-link :href="route('sector.index')" :active="request()->routeIs('dashboard')" style="text-decoration: none;">
+                    <x-nav-link :href="route('sector.index')" :active="request()->routeIs('sector.index')" style="text-decoration: none;">
                         {{ __('Setores') }}
                     </x-nav-link>
                 </div>
